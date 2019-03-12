@@ -13,9 +13,8 @@ Gem::Specification.new do |s|
   s.required_ruby_version     = '>= 1.9.3'
   s.required_rubygems_version = '>= 1.8.23'
 
-  s.author       = 'Skinnyworm'
-  s.email        = 'askinnyworm@gmail.com'
-  s.homepage     = 'git@github.com:emilesu/omniauth-wechat-oauth2-mobile.git'
+  s.author       = 'emilesu'
+  s.email        = 'emilesu@qq.com'
 
   s.add_dependency 'omniauth', '~> 1.0'
   s.add_dependency 'omniauth-oauth2', '~> 1.0'
