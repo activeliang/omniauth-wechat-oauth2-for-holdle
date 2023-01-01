@@ -40,7 +40,9 @@ module OmniAuth
       end
 
       def request_phase
-        params = client.auth_code.authorize_params.merge(redirect_uri: callback_url).merge(authorize_params)
+        new_callback_url = URI.parse(callback_url)
+        new_callback_url.host = 'www.holdle.com'
+        params = client.auth_code.authorize_params.merge(redirect_uri: new_callback_url.to_s).merge(authorize_params)
         params["appid"] = params.delete("client_id")
         redirect client.authorize_url(params)
       end
